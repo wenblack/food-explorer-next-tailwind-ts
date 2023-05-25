@@ -8,9 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgheader: '#00111A',
-        bgfooter: '#00111A',
-        bgprimaray: '#000A0F'
+        bgSecondary: '#00111A',
+        bgPrimary: '#000A0F',
+        textWhite: '#fff',
+        redButton: '#92000E',
+        priceBlue: '#82F3FF',
+        placeHolder: '#7C7C8A',
+        title: '#E1E1E6',
+        descriptionField: '#C4C4CC',
+        textFooter: '#FFFAF1'
       },
     },
   },
