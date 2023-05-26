@@ -1,13 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
-  name: string,
-  description: string,
-  price: number,
-  ingredients: Array<string>
-}
-
 const food = [
   {
     name: "Salada Ravanello",
@@ -82,7 +75,6 @@ const food = [
     ingredients: ["canela", "whisky", "maçã"]
   },
 ]
-
 
 export default function handler(
   req: NextApiRequest,

@@ -16,7 +16,8 @@ module.exports = {
         placeHolder: '#7C7C8A',
         title: '#E1E1E6',
         descriptionField: '#C4C4CC',
-        textFooter: '#FFFAF1'
+        textFooter: '#FFFAF1',
+        bgForm: '#0D1D25'
       },
     },
   },
