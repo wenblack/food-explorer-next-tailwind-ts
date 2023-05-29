@@ -30,7 +30,7 @@ export function Header() {
         <>
           <div className="px-2 sm:px-6 lg:px-8 h-full">
             <div className="relative flex h-full items-center justify-around">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-title hover:bg-gray-700 hover:text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -59,11 +59,11 @@ export function Header() {
                     <Link className="flex text-title  md:flex lg:flex  items-center ml-8 font-normal text-base" href={'#'}>
                       Meus Favoritos
                     </Link>
-                    <form action="" className="h-12 flex sm:hidden md:flex w-full min-w-[250px] max-w-[410px] bg-bgForm gap-3 rounded-lg px-[16px] py-[14px]">
+                    <form action="" className="h-12 flex sm:hidden md:flex w-fit min-w-[250px] max-w-[410px] bg-bgForm gap-3 rounded-lg px-[16px] py-[14px]">
                       <Image src={search} alt="Search logo Icon" ></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções de pratos"></input>
                     </form>
-                    <form action="" className="h-12 hidden text-sm md:hidden sm:flex min-w-[220px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                    <form action="" className="h-12 relative hidden text-sm md:hidden sm:flex min-w-[220px] max-w-[250px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
@@ -77,7 +77,7 @@ export function Header() {
                   
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
+              <div className="absolute hidden inset-y-0 right-0 md:flex sm:flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
                 <Link href={'#'} className="ml-8 hover:opacity-70" >
                   <Image src={logOutIcon} alt="LogOut Icon"></Image>
                </Link>
