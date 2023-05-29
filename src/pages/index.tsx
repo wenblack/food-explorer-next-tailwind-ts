@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header'
 import Example from '@/components/MenuMobile'
 import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
