@@ -63,7 +63,7 @@ export function Header() {
                       <Image src={search} alt="Search logo Icon" ></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções de pratos"></input>
                     </form>
-                    <form action="" className="h-12 hidden text-sm md:hidden sm:flex w-full min-w-[150px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                    <form action="" className="h-12 hidden text-sm md:hidden sm:flex min-w-[220px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
