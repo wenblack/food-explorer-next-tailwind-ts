@@ -44,7 +44,7 @@ export function Header() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                     <span className={`flex gap-3 items-center font-bold text-xl text-title sm:hidden md:hidden lg:hidden ${poppins.className}`}>
-                        <form action="" className="flex text-sm h-full w-fit max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                        <form action="" className="flex text-sm h-full w-[240px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
@@ -63,7 +63,7 @@ export function Header() {
                       <Image src={search} alt="Search logo Icon" ></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções de pratos"></input>
                     </form>
-                    <form action="" className="h-12 relative w-full hidden text-sm md:hidden sm:flex min-w-[210px] max-w-[250px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                    <form action="" className="h-12  w-full hidden text-sm md:hidden sm:flex  bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
