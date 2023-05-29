@@ -5,15 +5,13 @@ import Image from 'next/image'
 import  logo from '../../assets/explorerLogo.svg' 
 import { Poppins } from 'next/font/google'
 import logOutIcon from '../../assets/logOut.svg'
-import favoriteIcon from '../../assets/Heart.svg'
 import search from '../../assets/Search.svg'
 import { Button } from '../Button'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: '❤  Meus Favoritos ', href: '#', current: false },
+  { name: '📝  Meu pedido', href: '#', current: false },
+  { name: '❌ Sair', href: '#', current: false },
 ]
 const poppins = Poppins({ subsets: ['latin'], weight: ['500', '400', '700', '600'] })
 
@@ -22,7 +20,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export function Header() {
   return (
     <Disclosure 
       as="nav" 
@@ -46,7 +44,7 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                     <span className={`flex gap-3 items-center font-bold text-xl text-title sm:hidden md:hidden lg:hidden ${poppins.className}`}>
-                        <form action="" className="flex text-sm h-full w-full  max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                        <form action="" className="flex text-sm h-full w-fit max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
@@ -57,15 +55,15 @@ export default function Example() {
                     </span>
                 </div>
                 <div className="hidden w-full  sm:ml-2 sm:block">
-                  <div className="flex h-full items-center gap-8">
-                    <Link className="flex  md:flex lg:flex  items-center ml-8 font-normal text-base" href={'#'}>
+                  <div className="flex h-full justify-center items-center gap-8">
+                    <Link className="flex text-title  md:flex lg:flex  items-center ml-8 font-normal text-base" href={'#'}>
                       Meus Favoritos
                     </Link>
-                    <form action="" className="flex sm:hidden md:flex h-full w-full min-w-[250px] max-w-[410px] bg-bgForm gap-3 rounded-lg px-[16px] py-[14px]">
+                    <form action="" className="h-12 flex sm:hidden md:flex w-full min-w-[250px] max-w-[410px] bg-bgForm gap-3 rounded-lg px-[16px] py-[14px]">
                       <Image src={search} alt="Search logo Icon" ></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções de pratos"></input>
                     </form>
-                    <form action="" className="hidden text-sm md:hidden sm:flex h-full w-full min-w-[150px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                    <form action="" className="h-12 hidden text-sm md:hidden sm:flex w-full min-w-[150px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
@@ -96,7 +94,7 @@ export default function Example() {
                   href={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    'block rounded-md px-3 py-2 text-lg font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
