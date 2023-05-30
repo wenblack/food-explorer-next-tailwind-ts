@@ -6,7 +6,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
       colors: {
         bgSecondary: '#00111A',
         bgPrimary: '#000A0F',
@@ -17,8 +16,10 @@ module.exports = {
         title: '#E1E1E6',
         descriptionField: '#C4C4CC',
         textFooter: '#FFFAF1',
-        bgForm: '#0D1D25'
-      },
+      bgForm: '#0D1D25',
+      bgContentForm: '#001119',
+      white: '#FFF',
+      transparent: 'transparent'
     },
   },
   plugins: [],
