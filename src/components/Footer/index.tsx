@@ -1,6 +1,5 @@
 import { Disclosure } from '@headlessui/react'
 import Image from 'next/image'
-import logo from '../../assets/explorerLogo.svg'
 import { Poppins } from 'next/font/google'
 import whiteLogo from '../../assets/explorerLogoWhite.svg'
 
@@ -15,10 +14,9 @@ function classNames(...classes: string[]) {
 export function Footer() {
   return (
     <Disclosure
-      as="footer"
+      as="div"
       className="flex relative justify-around items-center  h-[102px]  w-screen bg-bgSecondary"
     >
-      {({ open }) => (
         <>
           <div className="lg:mx-32 w-full md:mx-24 sm:px-6 lg:px-8 h-full">
             <div className=" flex h-full items-center justify-around">
@@ -46,7 +44,6 @@ export function Footer() {
             </div>
           </Disclosure.Panel>
         </>
-      )}
     </Disclosure>
   )
 }

@@ -46,7 +46,9 @@ export function Header() {
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
                   </span>
-                  <Logo></Logo>
+                  <span className={` hidden md:hidden sm:hidden gap-3 items-center font-bold text-2xl text-title lg:flex `}>
+                    <Logo></Logo>
+                  </span>
                 </div>
                 <div className="hidden w-full sm:ml-2 sm:block">
                   <div className="flex h-full justify-center items-center gap-8">
