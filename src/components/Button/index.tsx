@@ -23,7 +23,7 @@ export function Button({number, order, value}:ButtonProps){
         )
     }
     return(
-            <button className={`flex h-12 hover:opacity-80 w-full items-center bg-bgbutton gap-3 rounded-lg justify-center py-[14px] bg-redButton ${poppins.className}`}>
+            <button className={`flex  h-12 hover:opacity-80 w-full items-center bg-bgbutton gap-3 rounded-lg justify-center py-[14px] bg-redButton ${poppins.className}`}>
                 <span>
                     {value}
                 </span>
