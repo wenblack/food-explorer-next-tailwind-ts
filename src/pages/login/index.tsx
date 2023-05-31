@@ -28,7 +28,7 @@ export default function Login() {
           <Input value='No mínimo 6 caracteres' label='Senha' />
           <Button value='Entrar' />    
           </div>
-          <Link className={`${poppins.className} hover:opacity-70  font-medium mt-8`} href={'#'}>Criar uma conta</Link>
+          <Link className={`${poppins.className} hover:opacity-70  font-medium mt-8`} href={'/sign-up'}>Criar uma conta</Link>
         </div>
         {/* Mobile version*/}
         <div className=' flex md:hidden sm:flex  lg:hidden flex-col  items-center justify-center h-[100vh] w-[100vw] sm:min-h-[540px] md:max-w-[476px]  bg-bgContentForm rounded-lg'>
@@ -38,7 +38,7 @@ export default function Login() {
             <Input value='No mínimo 6 caracteres' label='Senha' />
             <Button value='Entrar' />            
           </div>
-          <Link className={`${poppins.className} hover:opacity-70  font-medium mt-8`} href={'#'}>Criar uma conta</Link>
+          <Link className={`${poppins.className} hover:opacity-70  font-medium mt-8`} href={'/sign-up'}>Criar uma conta</Link>
         </div>
        </div>
       </main>
