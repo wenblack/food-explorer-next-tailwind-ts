@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react'
 import Image from 'next/image'
 import { Poppins } from 'next/font/google'
-import whiteLogo from '../../assets/explorerLogoWhite.svg'
+import whiteLogo from '../../assets/svg/explorerLogoWhite.svg'
 
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['500', '400', '700', '600'] })

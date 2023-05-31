@@ -1,5 +1,5 @@
 import Image from "next/image"
-import orderIcon from '../../assets/Receipt.svg'
+import orderIcon from '../../assets/svg/Receipt.svg'
 import { Poppins } from "next/font/google"
 
 
