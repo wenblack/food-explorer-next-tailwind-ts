@@ -3,6 +3,8 @@ import pixLogo from '../../assets/svg/pix.svg'
 import Image from "next/image"
 import creditCardLogo from '../../assets/svg/CreditCard.svg'
 import qrCode from '../../assets/svg/qrCode.svg'
+import { Input } from "../Input"
+import { Button } from "../Button"
 
 export function PaymentView() {
   const [pageNumber, setpageNumber] = useState(1)
@@ -54,7 +56,7 @@ export function PaymentView() {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[50vh] max-h-[381px] max-w-[530px]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-full max-h-[381px] max-w-[530px]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
@@ -101,15 +103,25 @@ export function PaymentView() {
 
       </nav>
 
-      <div className=" flex justify-center border-bgForm items-center border w-[80vw] h-[50vh] max-h-[381px] max-w-[530px] ">
+      <div className=" flex justify-center border-bgForm items-center border w-[80vw] h-full max-h-[381px] max-w-[530px] ">
         <div
           id="bar-with-underline-1"
           role="tabpanel"
           aria-labelledby="bar-with-underline-item-1"
+          className="flex items-center flex-col gap-5 px-2"
         >
-          <p className="text-gray-500 dark:text-gray-400">
-            This is the <em className="font-semibold text-gray-800 dark:text-gray-200">Credit Card</em> item s tab body.
-          </p>
+          <Input
+            label="Número do Cartão"
+            value="0000 0000 0000 0000"
+            cardNumber
+          />
+          <span className="flex w-full justify-between  mb-5">
+            <Input type="text" label="Validade" value="04/25" validateMonth />
+            <Input type="number" label="CVC" value="000" cvc />
+          </span>
+          <span className="w-full flex max-w-[60vw]">
+            <Button value="Finalizar Pagamento" />
+          </span>
         </div>
       </div>
     </>
