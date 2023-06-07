@@ -16,7 +16,7 @@ export function Input({ value, label, type, cardNumber, cvc, validateMonth }: in
         return (
             <div className="flex flex-col gap-2 ">
                 <label htmlFor="form">{label}</label>
-                <form id={id} name={id} className="flex  focus-within:ring-1 ring-white font-normal w-[25vw]  max-w-[166px] h-12 bg-bgForm gap-3 rounded-lg pl-[14px]">
+                <form id={id} name={id} className="flex  focus-within:ring-1 ring-white font-normal w-[25vw]  max-w-[166px] h-12 bg-bgForm gap-3 rounded-lg p-[14px]">
                     <input type='number' pattern="\d\d\d" required className="bg-transparent  w-full outline-none font-normal text-base " placeholder={value}></input>
                 </form>
             </div >
