@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 import pixLogo from '../../assets/svg/pix.svg'
 import Image from "next/image"
 import creditCardLogo from '../../assets/svg/CreditCard.svg'
@@ -31,7 +31,7 @@ export function PaymentView() {
         <nav className="flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[530px] z-0  border  overflow-hidden " aria-label="Tabs" role="tablist">
           <button
             type="button"
-            className="  bg-bgSecondary h-[81px] border-b-white border-bgForm hover:opacity-70  relative min-w-0 flex-1 first:border-l-0 border-l border-b-2 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10   active"
+            className="  bg-bgSecondary h-[81px] border-b-white border-bgForm hover:opacity-70   min-w-0 flex-1 first:border-l-0 border-l border-b-2 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10   active"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -46,7 +46,7 @@ export function PaymentView() {
 
           <button
             type="button"
-            className=" hover:opacity-70 h-[81px]  border-bgForm relative min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"

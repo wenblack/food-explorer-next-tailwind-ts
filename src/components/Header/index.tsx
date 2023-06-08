@@ -21,7 +21,7 @@ export function Header() {
   return (
     <Disclosure
       as="nav"
-      className=" justify-between items-center fixed h-[102px] top-0 w-screen bg-bgSecondary"
+      className=" justify-between z-10 items-center fixed h-[102px] top-0 w-screen bg-bgSecondary"
     >
       {({ open }) => (
         <>
