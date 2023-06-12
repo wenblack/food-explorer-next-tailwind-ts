@@ -7,7 +7,7 @@ const roboto = Roboto_Flex({ subsets: ['latin'] })
 
 export default function Orders() {
   return (
-    <div className={`min-h-screen justify-center items-center h-full flex overflow-auto  w-screen bg-bgPrimary ${roboto.className}`}>
+    <div className={`min-h-screen h-full flex overflow-auto  w-screen bg-bgPrimary ${roboto.className}`}>
       <header className='text-white '>
         <Header></Header>
       </header>
