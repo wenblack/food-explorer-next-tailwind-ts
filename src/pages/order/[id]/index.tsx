@@ -23,7 +23,7 @@ export default function OrderView() {
       <header className='text-white'>
         <Header></Header>
       </header>
-      <main className={`min-h-screen py-32 w-[100vw] sm:overflow-hidden md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-fulll grid md:grid-cols-2 lg:grid-cols-2  bg-bgPrimary  ${roboto.className}`}>
+      <main className={`min-h-screen py-32 w-[100vw]  sm:overflow-hidden md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-fulll grid md:grid-cols-2 lg:grid-cols-2  bg-bgPrimary  ${roboto.className}`}>
         {/* Logo Column(Desktop)*/}
         <div className='grid  sm:flex h-full bg-bgPrimary text-white   lg:grid md:h-full items-start mt-8 justify-center'>
           <ProductsList />
@@ -31,7 +31,7 @@ export default function OrderView() {
         {/* Form Column */}
         <div className=' text-white  md:h-full    grid  items-start justify-center bg-bgPrimary'>
           {/* Desktop Version*/}
-          <div className=' hidden  md:flex lg:flex flex-col  sm:h-full h-full  w-[100vw] max-h-[540px] md:min-h-[540px] max-w-[476px] md:m-8 bg-bgPrimary rounded-lg'>
+          <div className=' hidden  md:flex lg:flex flex-col  sm:h-full h-full  w-[100vw] max-h-[540px] md:min-h-[540px] max-w-[476px] md:mt-8 bg-bgPrimary rounded-lg'>
             <PaymentView status={nameConverted}></PaymentView>
           </div>
           {/* Mobile version*/}
@@ -40,7 +40,7 @@ export default function OrderView() {
           </div>
         </div>
       </main>
-      <footer>
+      <footer className='fixed bottom-0 z-10 '>
         <Footer></Footer>
       </footer>
     </>
