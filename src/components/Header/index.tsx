@@ -6,6 +6,7 @@ import logOutIcon from '../../assets/svg/logOut.svg'
 import search from '../../assets/svg/Search.svg'
 import { Button } from '../Button'
 import { Logo } from '../Logo'
+import { useRouter } from 'next/router'
 
 const navigation = [
   { name: '❤ Meus Favoritos ', href: '#', current: false },
@@ -18,6 +19,12 @@ function classNames(...classes: string[]) {
 }
 
 export function Header() {
+  const router = useRouter ()
+  
+  function navigate(e:any){
+    e.preventDefault()
+    router.push('/orders')
+  }
   return (
     <Disclosure
       as="nav"
@@ -63,18 +70,18 @@ export function Header() {
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
-                    <span className="flex sm:hidden md:flex">
-                      <Button value="Meu pedido " order number={0} />
-                    </span>
-                    <span className="flex w-[120px] md:hidden lg:hidden">
-                      <Button value="" order number={0} />
-                    </span>
+                    <Link href='/orders' className="flex sm:hidden md:flex">
+                      <Button  value="Meu pedido " order number={0} />
+                    </Link>
+                    <Link href='/orders' className="flex w-[120px] md:hidden lg:hidden">
+                      <Button  value="" order number={0} />
+                    </Link>
                   </div>
 
                 </div>
               </div>
               <div className="absolute hidden inset-y-0 right-0 md:flex sm:flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
-                <Link href={'#'} className="ml-8 hover:opacity-70" >
+                <Link href={'/'} className="ml-8 hover:opacity-70" >
                   <Image src={logOutIcon} alt="LogOut Icon"></Image>
                 </Link>
               </div>
