@@ -33,14 +33,14 @@ export function PaymentView({ status }: orderProps) {
   if (page === 'pix') {
     return (
       <>
-        <span className="flex w-[80vw] max-w-[530px] mb-8 justify-start items-center">
+        <span className="flex w-[80vw] max-w-[80%] mb-8 justify-start items-center">
           <Heading value="Pagamentos" h1={false} />
         </span>
 
-        <nav className="flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[530px] z-0  border  overflow-hidden " aria-label="Tabs" role="tablist">
+        <nav className="flex w-[80vw]  rounded-t-md text-title border-bgForm max-w-[80%] z-0  border   " aria-label="Tabs" role="tablist">
           <button
             type="button"
-            className="  bg-bgSecondary h-[81px] border-b-white border-bgForm hover:opacity-70   min-w-0 flex-1 first:border-l-0 border-l border-b-2 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10   active"
+            className="  bg-bgSecondary  h-[81px] border-b-white border-bgForm hover:opacity-70   min-w-0 flex-1 first:border-l-0 border-l border-b-2 py-4 px-4   text-sm font-medium text-center   focus:z-10   active"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -55,7 +55,7 @@ export function PaymentView({ status }: orderProps) {
 
           <button
             type="button"
-            className=" hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -70,7 +70,7 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-full max-h-[381px] max-w-[530px]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[381px]  max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
@@ -84,14 +84,14 @@ export function PaymentView({ status }: orderProps) {
   } else if (status === 'pending') {
     return (
       <>
-        <span className="flex w-[80vw] max-w-[530px] mb-8 justify-start items-center">
+        <span className="flex w-[80vw] max-w-[80%] mb-8 justify-start items-center">
           <Heading value="Pagamentos" h1={false} />
         </span>
 
-        <nav className="  flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[530px] z-0  border  overflow-hidden " aria-label="Tabs" role="tablist">
+        <nav className="  flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[80%] z-0  border   " aria-label="Tabs" role="tablist">
           <button
             type="button"
-            className=" cursor-not-allowed hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" cursor-not-allowed hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -105,7 +105,7 @@ export function PaymentView({ status }: orderProps) {
 
           <button
             type="button"
-            className=" cursor-not-allowed  hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" cursor-not-allowed  hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -119,12 +119,12 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-full max-h-[381px] max-w-[530px]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw]  h-[381px] max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
             aria-labelledby="bar-with-underline-item-1"
-            className="flex flex-col gap-9 items-center justify-center"
+            className="flex flex-col   my-8 items-center justify-center"
           >
             <Image src={clock} alt="Clock Image"></Image>
             <h2 className=" flex p-8 text-center text-2xl w-full  text-descriptionField">Aguardando pagamento no caixa</h2>
@@ -135,14 +135,14 @@ export function PaymentView({ status }: orderProps) {
   } else if (status === 'accept') {
     return (
       <>
-        <span className="flex w-[80vw] max-w-[530px] mb-8 justify-start items-center">
+        <span className="flex w-[80vw] max-w-[80%] mb-8 justify-start items-center">
           <Heading value="Pagamentos" h1={false} />
         </span>
 
-        <nav className="  flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[530px] z-0  border  overflow-hidden " aria-label="Tabs" role="tablist">
+        <nav className="  flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[80%] z-0  border   " aria-label="Tabs" role="tablist">
           <button
             type="button"
-            className=" cursor-not-allowed hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" cursor-not-allowed hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -156,7 +156,7 @@ export function PaymentView({ status }: orderProps) {
 
           <button
             type="button"
-            className=" cursor-not-allowed  hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" cursor-not-allowed  hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -170,12 +170,12 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-full max-h-[381px] max-w-[530px]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[381px] max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
             aria-labelledby="bar-with-underline-item-1"
-            className="flex flex-col gap-9 items-center justify-center"
+            className="flex flex-col   my-8 items-center justify-center"
           >
             <Image src={check} alt="Check Icon Image"></Image>
             <h2 className=" flex p-0  sm:p-8 text-center text-2xl w-full  text-descriptionField">
@@ -188,14 +188,14 @@ export function PaymentView({ status }: orderProps) {
   } else if (status === 'delivered') {
     return (
       <>
-        <span className="flex w-[80vw] max-w-[530px] mb-8 justify-start items-center">
+        <span className="flex w-[80vw] max-w-[80%] mb-8 justify-start items-center">
           <Heading value="Pagamentos" h1={false} />
         </span>
 
-        <nav className="  flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[530px] z-0  border  overflow-hidden " aria-label="Tabs" role="tablist">
+        <nav className="  flex w-[80vw] rounded-t-md text-title border-bgForm max-w-[80%] z-0  border   " aria-label="Tabs" role="tablist">
           <button
             type="button"
-            className=" cursor-not-allowed hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" cursor-not-allowed hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -209,7 +209,7 @@ export function PaymentView({ status }: orderProps) {
 
           <button
             type="button"
-            className=" cursor-not-allowed  hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+            className=" cursor-not-allowed  hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
             id="bar-with-underline-item-1"
             data-hs-tab="#bar-with-underline-1"
             aria-controls="bar-with-underline-1"
@@ -223,12 +223,12 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-full max-h-[381px] max-w-[530px]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw]  h-[381px] max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
             aria-labelledby="bar-with-underline-item-1"
-            className="flex flex-col gap-9 items-center justify-center"
+            className="flex flex-col   my-8 items-center justify-center"
           >
             <Image src={forknife} alt="Fork and Knife Icon Image"></Image>
             <h2 className=" flex p-0  sm:p-8 text-center text-2xl w-full  text-descriptionField">
@@ -239,17 +239,15 @@ export function PaymentView({ status }: orderProps) {
       </>
     )
   }
-
-
   return (
     <>
-      <span className="flex w-[80vw] max-w-[530px] mb-8 justify-start items-center">
+      <span className="flex w-[80vw] max-w-[80%] mb-8 justify-start items-center">
         <Heading value="Pagamentos" h1={false} />
       </span>
-      <nav className="flex rounded-t-md w-[80vw] max-w-[530px] z-0  border  overflow-hidden border-bgForm" aria-label="Tabs" role="tablist">
+      <nav className="flex rounded-t-md w-[80vw] max-w-[80%] z-0  border   border-bgForm" aria-label="Tabs" role="tablist">
         <button
           type="button"
-          className=" hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10"
+          className=" hover:opacity-70 h-[81px]   border-bgForm  min-w-0 flex-1 first:border-l-0 border-l border-b-0 py-4 px-4   text-sm font-medium text-center   focus:z-10"
           id="bar-with-underline-item-1"
           data-hs-tab="#bar-with-underline-1"
           aria-controls="bar-with-underline-1"
@@ -264,7 +262,7 @@ export function PaymentView({ status }: orderProps) {
 
         <button
           type="button"
-          className="  bg-bgSecondary h-[81px] border-b-white border-bgForm hover:opacity-70  relative min-w-0 flex-1 first:border-l-0 border-l border-b-2 py-4 px-4   text-sm font-medium text-center overflow-hidden  focus:z-10   active"
+          className="  bg-bgSecondary h-[81px] border-b-white border-bgForm hover:opacity-70  relative min-w-0 flex-1 first:border-l-0 border-l border-b-2 py-4 px-4   text-sm font-medium text-center   focus:z-10   active"
           id="bar-with-underline-item-2"
           data-hs-tab="#bar-with-underline-2"
           aria-controls="bar-with-underline-2"
@@ -280,7 +278,7 @@ export function PaymentView({ status }: orderProps) {
 
       </nav>
 
-      <div className=" flex justify-center border-bgForm items-center border w-[80vw] h-full max-h-[381px] max-w-[530px] ">
+      <div className=" flex justify-center border-bgForm items-center border w-[80vw] h-[381px]  max-w-[80%] ">
         <div
           id="bar-with-underline-1"
           role="tabpanel"
