@@ -70,7 +70,7 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[381px]  max-w-[80%]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[364px]  max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
@@ -119,7 +119,7 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw]  h-[381px] max-w-[80%]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw]  h-[364px] max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
@@ -170,7 +170,7 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[381px] max-w-[80%]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw] h-[364px] max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
@@ -223,7 +223,7 @@ export function PaymentView({ status }: orderProps) {
 
         </nav>
 
-        <div className=" flex justify-center items-center border border-bgForm w-[80vw]  h-[381px] max-w-[80%]">
+        <div className=" flex justify-center items-center border border-bgForm w-[80vw]  h-[364px] max-w-[80%]">
           <div
             id="bar-with-underline-1"
             role="tabpanel"
@@ -278,7 +278,7 @@ export function PaymentView({ status }: orderProps) {
 
       </nav>
 
-      <div className=" flex justify-center border-bgForm items-center border w-[80vw] h-[381px]  max-w-[80%] ">
+      <div className=" flex justify-center border-bgForm items-center border w-[80vw] h-[364px]  max-w-[80%] ">
         <div
           id="bar-with-underline-1"
           role="tabpanel"
