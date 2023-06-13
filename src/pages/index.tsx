@@ -25,8 +25,8 @@ export default function Login() {
         <div className=' hidden md:flex lg:flex flex-col  items-center justify-center h-[100vh] w-[100vw] max-h-[540px] md:min-h-[540px] max-w-[476px] md:m-8 bg-bgContentForm rounded-lg'>
           <Heading h1 value='Faça login' ></Heading>
           <div className='w-[348px] mt-8 flex flex-col gap-8 '>
-            <Input value='Exemplo: exemplo@exemplo.com.br' label='Email' />
-            <Input value='No mínimo 6 caracteres' label='Senha' />
+            <Input loginForm value='Exemplo: exemplo@exemplo.com.br' label='Email' />
+            <Input loginForm type='password' value='No mínimo 6 caracteres' label='Senha' />
             <Button value='Entrar' />
           </div>
           <Link className={`${poppins.className} hover:opacity-70  font-medium mt-8`} href={'/sign-up'}>Criar uma conta</Link>
@@ -35,8 +35,8 @@ export default function Login() {
         <div className=' flex md:hidden sm:flex  lg:hidden flex-col  items-center justify-center h-[100vh] w-[100vw] sm:min-h-[540px] md:max-w-[476px]  bg-bgContentForm rounded-lg'>
           <Heading h1 value='Faça login' ></Heading>
           <div className='w-[348px] justify-center items-center mt-8 flex flex-col gap-8 '>
-            <Input value='Exemplo: exemplo@exemplo.com.br' label='Email' />
-            <Input value='No mínimo 6 caracteres' label='Senha' />
+            <Input loginForm value='Exemplo: exemplo@exemplo.com.br' label='Email' />
+            <Input loginForm type='password' value='No mínimo 6 caracteres' label='Senha' />
             <Button value='Entrar' />
           </div>
           <Link className={`${poppins.className} hover:opacity-70  font-medium mt-8`} href={'/sign-up'}>Criar uma conta</Link>
