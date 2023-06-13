@@ -11,7 +11,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500'] })
 
 export default function SignUp() {
   return (
-    <main className={`min-h-screen sm:overflow-auto md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-fulll grid md:grid-cols-2 lg:grid-cols-2  w-screen bg-bgPrimary  ${roboto.className}`}>
+    <main className={`min-h-screen  md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-fulll grid md:grid-cols-2 lg:grid-cols-2  w-screen bg-bgPrimary  ${roboto.className}`}>
       {/* Logo Column(Desktop)*/}
       <div className='hidden md:flex overflow-hidden bg-bgPrimary text-white   lg:grid md:h-full items-center justify-center'>
         <span className={`flex items-center gap-3 text-[42px] font-bold ${poppins.className}`}>
