@@ -7,13 +7,13 @@ const roboto = Roboto_Flex({ subsets: ['latin'] })
 
 export default function Orders() {
   return (
-    <div className={`h-screen flex  flex-col w-full   max-w-screen bg-bgPrimary ${roboto.className}`}>
+    <div className={`flex min-h-screen flex-col w-full   max-w-screen bg-bgPrimary ${roboto.className}`}>
       <header className='text-white'>
         <Header></Header>
       </header>
       <main className='flex   bg-bgPrimary flex-col   items-center h-full w-full'
       >
-        <div className='py-36  flex flex-col gap-8 '>
+        <div className='py-36  flex flex-col gap-8  '>
           <Heading h1 value='Pedidos' />
           <table className=' hidden   text-descriptionField  lg:table md:table  w-[80vw] text-start  md:text-center lg:text-center text-sm flex-grow-0 max-w-[1132px]'>
             <thead className='border   rounded-l-lg '>
