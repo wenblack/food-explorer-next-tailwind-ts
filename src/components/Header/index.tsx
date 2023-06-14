@@ -6,12 +6,11 @@ import logOutIcon from '../../assets/svg/logOut.svg'
 import search from '../../assets/svg/Search.svg'
 import { Button } from '../Button'
 import { Logo } from '../Logo'
-import { useRouter } from 'next/router'
 
 const navigation = [
   { name: '❤ Meus Favoritos ', href: '#', current: false },
-  { name: '📝 Meu pedido', href: '#', current: false },
-  { name: '❌  Sair', href: '#', current: false },
+  { name: '📝 Meu pedido', href: '/orders', current: false },
+  { name: '❌  Sair', href: '/', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -19,12 +18,9 @@ function classNames(...classes: string[]) {
 }
 
 export function Header() {
-  const router = useRouter ()
+
   
-  function navigate(e:any){
-    e.preventDefault()
-    router.push('/orders')
-  }
+
   return (
     <Disclosure
       as="nav"
@@ -47,26 +43,26 @@ export function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <span className={`flex gap-3 items-center font-bold text-xl text-title sm:hidden md:hidden lg:hidden `}>
-                    <form action="" className="flex text-sm h-full w-[240px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                  <span className={`flex gap-3  items-center font-bold text-xl text-title sm:hidden md:hidden lg:hidden `}>
+                    <form action="" className="flex focus-within:ring text-sm h-full w-[240px] max-w-[400px] bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
-                      <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
+                      <input className="bg-transparent  w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
                   </span>
-                  <span className={` hidden md:hidden sm:hidden gap-3 items-center font-bold text-2xl text-title lg:flex `}>
+                  <Link href={'/dashboard'} className={` hidden md:hidden sm:hidden gap-3 items-center font-bold text-2xl text-title lg:flex `}>
                     <Logo></Logo>
-                  </span>
+                  </Link>
                 </div>
                 <div className="hidden w-full sm:ml-2 sm:block">
                   <div className="flex h-full justify-center items-center gap-8">
                     <Link className="flex hover:opacity-70 text-title  md:flex lg:flex  items-center ml-8 font-normal text-base" href={'#'}>
                       Meus Favoritos
                     </Link>
-                    <form action="" className="h-12 flex sm:hidden md:flex w-full min-w-[250px] max-w-[410px] bg-bgForm gap-3 rounded-lg px-[16px] py-[14px]">
+                    <form action="" className="h-12 flex focus-within:ring sm:hidden md:flex w-full min-w-[250px] max-w-[410px] bg-bgForm gap-3 rounded-lg px-[16px] py-[14px]">
                       <Image src={search} alt="Search logo Icon" ></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções de pratos"></input>
                     </form>
-                    <form action="" className="h-12  w-full hidden text-sm md:hidden sm:flex  bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
+                    <form action="" className="h-12 focus-within:ring w-full hidden text-sm md:hidden sm:flex  bg-bgForm gap-3 rounded-lg px-[14px] py-[12px]">
                       <Image src={search} alt="Search logo Icon" width={30} height={30}></Image>
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
