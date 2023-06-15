@@ -60,27 +60,29 @@ const [total, setTotal] = useState(1)
             <span className={`flex  flex-col  lg:hidden gap-4  items-center mt-8  lg:mt:11 ${roboto.className} text-priceBlue text-3xl w-[80vw] max-w-[400px] `}>
                <h3 >R$ 25,97</h3>  
               <form className='flex  text-title gap-2 flex-col items-center w-full  justify-between'>
-                <span className='flex w-[60vw] items-center justify-between'>
-                <button onClick={sub}>-</button>
+                <span className='flex w-[40vw] items-center justify-between'>
+                <button className='hover:opacity-70' onClick={sub}>-</button>
                 {
                    total===1 ? '01' : total  
                 }         
-                <button onClick={add}>+</button> 
-                <button className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button> 
+                <button className='hover:opacity-70' onClick={add}>+</button> 
                 </span>                                 
+                <button className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button> 
               </form>
             </span>
             
             <span className={`hidden lg:flex w-[400px]  items-center mt-8 ${roboto.className} text-priceBlue text-3xl justify-between `}>   
               <h3 className='flex ' >R$ 25,97</h3> 
+                <form className='text-title'>
                 <span className='flex items-center  gap-4 justify-between'>
-                <button onClick={sub}>-</button>
-                {
-                   total===1 ? '01' : total  
+                <button  className='hover:opacity-70' onClick={sub}>-</button>
+                  {
+                  total=== 1 ? '01' : total  
                 }
-                <button onClick={add}>+</button> 
+                <button className='hover:opacity-70' onClick={add}>+</button> 
                 <button className='hover:opacity-70 bg-redButton block px-4 ml-6 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button> 
                 </span>
+                </form>
             </span>
         </div>
       </section>
