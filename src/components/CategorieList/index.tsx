@@ -35,7 +35,7 @@ export function CategorieList({ id }: CategorieListProps) {
         >
           <Image src={leftIcon} alt="Arrow left Icon" />
         </button>
-        <ul id={id} className='flex scrollable overflow-x-scroll overflow-visible  gap-4 md:gap-6 lg:gap-6 mx-8 lg:mx-0 md:mx-0 '>
+        <ul id={id} className='flex  overflow-x-scroll overflow-visible  gap-4 md:gap-6 lg:gap-6 mx-8 lg:mx-0 md:mx-0 '>
           <li >
             <Product
               price='25,97'
@@ -85,7 +85,7 @@ export function CategorieList({ id }: CategorieListProps) {
             />
           </li>
         </ul>
-        <button onClick={scrollLeft} className='hidden pr-4 md:flex  justify-center items-center bg-transparent text-white w-[116px]'>
+        <button onClick={scrollLeft} className='hidden  md:min-h-[50vh]  pr-4 md:flex  justify-center items-center bg-transparent text-white w-[116px]'>
           <Image src={rightIcon} alt="Arrow right Icon" />
         </button>
       </div>

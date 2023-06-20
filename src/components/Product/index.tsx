@@ -2,14 +2,10 @@
 import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import Link from 'next/link'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import arrouLeftIcon from '../../assets/svg/CaretLeft.svg'
-import Image, { ImageProps, StaticImageData } from 'next/image'
-import saladImage from '../../assets/images/salad.png'
-import { IngredientsList } from '@/components/IngredientsList'
+import Image, { StaticImageData } from 'next/image'
+
 import { useState } from 'react'
-import { Heading } from '../Heading'
+
 
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })

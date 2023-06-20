@@ -12,7 +12,7 @@ export default function Cart() {
       <header className='  text-white'>
         <Header></Header>
       </header>
-      <main className={`min-h-screen py-20  md:pt-32 lg:pt-24  md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-full grid md:grid-cols-2 lg:grid-cols-2  w-screen bg-bgPrimary  ${roboto.className}`}>
+      <main className={`min-h-screen py-20  md:pt-20 lg:pt-24  md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-full grid md:grid-cols-2 lg:grid-cols-2  w-screen bg-bgPrimary  ${roboto.className}`}>
         <div className='flex py-16  sm:py-16  md:flex overflow-hidden sm:overflow-auto bg-bgPrimary text-white   lg:grid md:h-full items-center justify-center'>
           <ProductsList />
         </div>
