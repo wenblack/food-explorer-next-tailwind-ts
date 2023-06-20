@@ -32,9 +32,6 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
     e.preventDefault()
     setTotal(total + 1)
   }
-  function reset(e:any){
-     e.preventDefault()
-  }
 
   return (
     <div className={` flex  flex-col bg-bgSecondary rounded-lg w-[300px] h-[512px] justify-center items-center  gap-4   ${roboto.className}`}>

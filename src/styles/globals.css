@@ -5,6 +5,7 @@
 :root {
   --primary: white;
   --secondary: #00111A;
+  --gradient: linear-gradient(180deg, #091E26 0%, #00131C 100%)
 
 }
 
