@@ -12,8 +12,8 @@ export default function Cart() {
       <header className='  text-white'>
         <Header></Header>
       </header>
-      <main className={`min-h-screen py-20  md:pt-20 lg:pt-24  md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-full grid md:grid-cols-2 lg:grid-cols-2  w-screen bg-bgPrimary  ${roboto.className}`}>
-        <div className='flex py-16  sm:py-16  md:flex overflow-hidden sm:overflow-auto bg-bgPrimary text-white   lg:grid md:h-full items-center justify-center'>
+      <main className={`min-h-screen py-16    md:flex-col md:flex md:justify-evenly lg:overflow-hidden lg:grid  h-full grid md:grid-cols-2 lg:grid-cols-2  w-screen bg-bgPrimary  ${roboto.className}`}>
+        <div className='flex py-16   md:flex overflow-hidden sm:overflow-auto bg-bgPrimary text-white   lg:grid md:h-full items-center justify-center'>
           <ProductsList />
         </div>
         {/* Form Column */}
@@ -23,12 +23,15 @@ export default function Cart() {
             <PaymentView  ></PaymentView>
           </div>
           {/* Mobile version*/}
-          <div className=' flex md:hidden sm:flex pb-16  lg:hidden flex-col  items-center justify-center  w-[100vw]  md:max-w-[476px]  bg-bgPrimary '>
+          <div className=' flex md:hidden sm:flex   lg:hidden flex-col  items-center justify-center  w-[100vw]  md:max-w-[476px]  bg-bgPrimary '>
             <PaymentView  ></PaymentView>
           </div>
         </div>
       </main>
-      <footer className=' fixed bottom-0 w-screen'>
+      <footer className='  lg:hidden bottom-0 w-screen'>
+        <Footer></Footer>
+      </footer>
+      <footer className='fixed bottom-0 hidden lg:flex'>
         <Footer></Footer>
       </footer>
     </div>
