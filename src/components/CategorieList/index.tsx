@@ -8,14 +8,17 @@ interface CategorieListProps {
   id: string
 }
 
-export function CategorieList({ id }: CategorieListProps) {
 
+
+export function CategorieList({ id }: CategorieListProps) {
+  
   function scrollLeft() {
-    let value = document.getElementById(String(id))
-    if (value) {
-      value.scrollLeft += 116
+      let value = document.getElementById(String(id))
+      if (value) {
+        value.scrollLeft += 116
+      }
     }
-  }
+ 
   function scrollRight() {
     let value = document.getElementById(String(id))
     if (value) {
@@ -31,11 +34,11 @@ export function CategorieList({ id }: CategorieListProps) {
       <div className='flex w-screen  h-full'>
         <button
           onClick={scrollRight}
-          className=' hidden md:flex lg:flex   justify-center items-center  text-white w-[116px]  '
+          className=' hidden md:flex lg:flex   justify-center items-center  text-white  w-[116px]'
         >
           <Image src={leftIcon} alt="Arrow left Icon" />
         </button>
-        <ul id={id} className='flex  overflow-x-scroll overflow-visible  gap-4 md:gap-6 lg:gap-6 mx-8 lg:mx-0 md:mx-0 '>
+        <ul id={id} className='flex  overflow-x-scroll overflow-visible  gap-4 md:gap-6 lg:gap-6 ml-8 md:mx-8  pr-8 lg:mr-8  '>
           <li >
             <Product
               price='25,97'

@@ -3,7 +3,6 @@ import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
-
 import { useState } from 'react'
 
 
@@ -33,6 +32,10 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
     e.preventDefault()
     setTotal(total + 1)
   }
+  function reset(e:any){
+     e.preventDefault()
+  }
+
   return (
     <div className={` flex  flex-col bg-bgSecondary rounded-lg w-[300px] h-[512px] justify-center items-center  gap-4   ${roboto.className}`}>
       {/* Logo Column(Desktop)*/}
@@ -45,8 +48,9 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
       <section className=' text-white flex  justify-center  text-center items-center     '>
         <div className={`flex flex-col  gap-4   justify-center items-center  ${poppins.className} `}>
           <Link href={'/details'} className='hover:opacity-70 text-2xl flex    justify-center  font-medium  pl-8 lg:pl-0 md:pl-8' > {name}</Link>
-          <p className='  font-normal  text-[14px]    px-8 lg:px-0 '>{description}</p>
-
+          <p className=' flex font-normal  text-[14px]    px-8 lg:px-0 '>
+            {description}
+          </p>
           <h3 className={`flex items-center justify-center   ${roboto.className} text-priceBlue text-[32px] leading-[56px]  `} >R$ {price}</h3>
           <span className={`flex  gap-4  items-center justify-center   ${roboto.className}  text-3xl w-[208px]  `}>
             <span className='flex w-[100px] items-center justify-between'>
