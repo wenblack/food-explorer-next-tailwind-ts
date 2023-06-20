@@ -41,12 +41,14 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
     <div className={` flex  flex-col bg-bgSecondary rounded-lg w-[300px] h-[512px] justify-center items-center  gap-4   ${roboto.className}`}>
       {/* Logo Column(Desktop)*/}
       <span className={`flex   items-center justify-center`}>
-        <Image alt='product Image' src={imgUrl}></Image>
+        <Link href={'/details'} className='hover:opacity-70'>
+          <Image alt='product Image' src={imgUrl}></Image>
+        </Link>
       </span>
       {/* Form Column */}
       <section className=' text-white flex  justify-center  text-center items-center     '>
         <div className={`flex flex-col  gap-4   justify-center items-center  ${poppins.className} `}>
-          <h1 className='text-2xl flex    justify-center  font-medium  pl-8 lg:pl-0 md:pl-8'>{name}</h1>
+          <Link href={'/details'} className='hover:opacity-70 text-2xl flex    justify-center  font-medium  pl-8 lg:pl-0 md:pl-8' > {name}</Link>
           <p className='  font-normal  text-[14px]    px-8 lg:px-0 '>{description}</p>
 
           <h3 className={`flex items-center justify-center   ${roboto.className} text-priceBlue text-[32px] leading-[56px]  `} >R$ {price}</h3>
@@ -61,7 +63,7 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
             <button className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button>
           </span>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   )
 }
