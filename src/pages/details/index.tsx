@@ -34,24 +34,24 @@ export default function Details() {
       <header className='top-0  text-white'>
         <Header />
       </header>
-      <main className={` grid mt-28  justify-between h-screen overflow-y-auto grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2  w-screen  bg-bgPrimary  ${roboto.className}`}>
+      <main className={` grid mt-28 lg:mt-32 items-center justify-between h-screen lg:overflow-x-hidden overflow-y-auto grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2  w-screen  bg-bgPrimary  ${roboto.className}`}>
         {/* Logo Column(Desktop)*/}
-        <section className=' bg-bgPrimary text-white grid '>
-          <div className='flex flex-col gap-8 '>
-            <Link className='flex  ml-[10vw] w-28 hover:opacity-70 h-[34px] justify-start items-center' href={'/dashboard'}>
+        <section className=' bg-bgPrimary items-start text-white grid '>
+          <div className=' flex flex-col gap-8 '>
+            <Link className='flex   ml-[10vw] w-28 hover:opacity-70 h-[34px] justify-start items-center' href={'/dashboard'}>
               <Image alt='Left Arrow Icon' src={arrouLeftIcon} />
               <span className={`${poppins.className} font-medium text-2xl`}>
                 voltar
               </span>
             </Link>
-            <span className={`flex w-full items-center self-center justify-center`}>
-              <Image alt='product Image' src={saladImage}></Image>
+            <span className={`flex w-full lg:pt-0  items-center self-center justify-center`}>
+              <Image alt='product Image' height={250} src={saladImage}></Image>
             </span>
           </div>
         </section>
         {/* Form Column */}
         <section className=' text-white grid w-full max-w-[100vw] mt-8 lg:mt-0 self-center bg-bgPrimary'>
-          <div className={`flex flex-col w-full pb-32 items-center lg:items-start ${poppins.className} `}>
+          <div className={`flex flex-col w-full pb-8 items-center lg:items-start ${poppins.className} `}>
             <h1 className='text-4xl flex w-full mb-2 leading-[56px] max-w-[603px]  font-medium lg:text-[42px] pl-8 lg:pl-0 md:pl-8'>Salada Ravanello</h1>
             <p className='px-8 w-full font-normal max-w-[603px] lg:text-left text-lg lg:text-xl lg:px-0 md:px-8 '>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</p>
             <span className='mt-8 items-center max-w-[80vw] justify-center'>
