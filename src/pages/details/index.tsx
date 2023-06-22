@@ -1,18 +1,18 @@
-
 import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
+
 import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { Auth } from '@/middleware/Auth'
+
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import arrowLeftIcon from '../../assets/svg/CaretLeft.svg'
-import Image from 'next/image'
-import saladImage from '../../assets/images/salad.png'
 import { IngredientsList } from '@/components/IngredientsList'
-import { useState } from 'react'
-import { useAuth } from '@/hooks/UserContext'
-import { NotConnectedView } from '@/components/NotConnectedView'
-import { useRouter } from 'next/router'
 
+import saladImage from '../../assets/images/salad.png'
+import arrowLeftIcon from '../../assets/svg/CaretLeft.svg'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500', '400'] })
@@ -20,8 +20,8 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500', '400
 
 export default function Details() {
   const [total, setTotal] = useState(1)
-  const { state } = useAuth()
   const router = useRouter()
+
   function sub(e: any) {
     e.preventDefault()
     if (total === 1) {
@@ -38,13 +38,9 @@ export default function Details() {
     router.push('/cart')
   }
 
-  if (state.logged === false) {
-    return (
-      <NotConnectedView></NotConnectedView>
-    )
-  }
   return (
-    <div className='flex flex-col bg-bgPrimary w-screen overflow-hidden h-screen '>
+   <Auth>
+     <div className='flex flex-col bg-bgPrimary w-screen overflow-hidden h-screen '>
       <header className='top-0  text-white'>
         <Header />
       </header>
@@ -105,5 +101,6 @@ export default function Details() {
         <Footer></Footer>
       </footer>
     </div>
+   </Auth>
   )
 }

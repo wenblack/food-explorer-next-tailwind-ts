@@ -6,6 +6,7 @@ import logOutIcon from '../../assets/svg/logOut.svg'
 import search from '../../assets/svg/Search.svg'
 import { Button } from '../Button'
 import { Logo } from '../Logo'
+import { disconnect } from '@/utils/disconnect'
 
 const navigation = [
   { name: '❤ Meus Favoritos ', href: '#', current: false },
@@ -19,8 +20,7 @@ function classNames(...classes: string[]) {
 
 export function Header() {
 
-
-
+  
   return (
     <Disclosure
       as="nav"
@@ -77,7 +77,7 @@ export function Header() {
                 </div>
               </div>
               <div className="absolute hidden inset-y-0 right-0 md:flex sm:flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
-                <Link href={'/'} className="ml-8 hover:opacity-70" >
+                <Link onClick={disconnect}  href={'/'} className="ml-8 hover:opacity-70" >
                   <Image src={logOutIcon} alt="LogOut Icon"></Image>
                 </Link>
               </div>

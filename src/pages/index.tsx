@@ -52,16 +52,16 @@ export default function Login() {
     if (user === 'admin' && password === 'admin') {
       state.logged = true
       state.admin = true
-      localStorage.setItem('logged','true')
-      localStorage.setItem('admin','true')
-      console.log(localStorage.getItem('logged'))
+      sessionStorage.setItem('logged','true')
+      sessionStorage.setItem('admin','true')
+      console.log(sessionStorage.getItem('logged'))
       router.push('/dashboard')
     }
 
     if (password === 'user') {
       state.logged = true
-      localStorage.setItem('logged','true')
-      console.log(localStorage.getItem('logged'))
+      sessionStorage.setItem('logged','true')
+      console.log(sessionStorage.getItem('logged'))
       router.push('/dashboard')
     }
 
