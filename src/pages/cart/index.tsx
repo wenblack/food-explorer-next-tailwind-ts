@@ -3,7 +3,7 @@ import { PaymentView } from '@/components/PaymentView'
 import { ProductsList } from '@/components/ProductsList'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { Auth } from '@/middleware/Auth'
+import { Auth } from '@/middlewares/Auth'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 

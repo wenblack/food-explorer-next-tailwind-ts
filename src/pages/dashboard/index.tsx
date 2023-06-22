@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { Roboto_Flex } from 'next/font/google'
 import { CategorieList } from '@/components/CategorieList'
 import { HeroSection } from '@/components/HeroSection'
-import { Auth } from '@/middleware/Auth'
+import { Auth } from '@/middlewares/Auth'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 

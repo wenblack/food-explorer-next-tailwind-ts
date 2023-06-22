@@ -4,6 +4,8 @@ import saladImage from '../../assets/images/salad.png'
 import leftIcon from '../../assets/svg/CaretLeft.svg'
 import rightIcon from '../../assets/svg/CaretRight.svg'
 import Image from "next/image"
+import { UserContext } from "@/hooks/UserContext"
+import { useContext } from "react"
 interface CategorieListProps {
   id: string
 }
@@ -11,7 +13,8 @@ interface CategorieListProps {
 
 
 export function CategorieList({ id }: CategorieListProps) {
-  
+    const {state} = useContext(UserContext)
+
   function scrollLeft() {
       let value = document.getElementById(String(id))
       if (value) {
@@ -25,6 +28,7 @@ export function CategorieList({ id }: CategorieListProps) {
       value.scrollLeft -= 116
     }
   }
+  
 
   return (
     <section className='flex  flex-col mb-8  w-screen '>
@@ -41,6 +45,7 @@ export function CategorieList({ id }: CategorieListProps) {
         <ul id={id} className='flex  overflow-x-scroll overflow-visible  gap-4 md:gap-6 lg:gap-6 ml-8 md:mx-8  pr-8 lg:mr-8  '>
           <li >
             <Product
+              isAdmin={state.admin}
               price='25,97'
               imgUrl={saladImage}
               description='Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.'

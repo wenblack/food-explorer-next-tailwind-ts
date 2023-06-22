@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-
+import { Heading } from '../Heading'
 
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -16,10 +16,10 @@ interface ProductProps {
   description: string
   imgUrl: string | StaticImageData
   price: string
-
+  isAdmin ?: boolean
 }
 
-export default function Product({ description, imgUrl, name, price }: ProductProps) {
+export default function Product({ description, imgUrl, name, price , isAdmin}: ProductProps) {
   const [total, setTotal] = useState(1)
   const router = useRouter()
 
@@ -39,6 +39,15 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
     e.preventDefault()
     router.push('/cart')
   }
+
+  if(isAdmin){
+    return(
+      <main className='flex  h-full w-full justify-center items-center flex-col text-center'>
+        <Heading h1 value='Admin connnected' />
+      </main>
+    )
+  }
+
   return (
     <div className={` flex  flex-col bg-bgSecondary rounded-lg w-[300px] h-[512px] justify-center items-center  gap-4   ${roboto.className}`}>
       {/* Logo Column(Desktop)*/}

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { Auth } from '@/middleware/Auth'
+import { Auth } from '@/middlewares/Auth'
 
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
