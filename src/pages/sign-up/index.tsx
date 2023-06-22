@@ -32,6 +32,8 @@ export default function SignUp() {
   function validateFields() {
     if (user === '' || password === '' || name === '') {
       alert('Por favor preencha todos os campos')
+    } else if (password.length <= 6) {
+      alert('Escolha uma senha com pelo menos 6 caracteres')
     } else {
       alert('Conta criada com sucesso!')
       router.push('/')
