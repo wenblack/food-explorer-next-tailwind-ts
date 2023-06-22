@@ -5,15 +5,15 @@ import { Input } from '@/components/Input'
 import { Heading } from '@/components/Heading'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
-import { useState, useContext } from 'react'
-import { UserContext } from '@/contexts/UserContext'
+import { useState } from 'react'
+import { useAuth } from '@/hooks/UserContext'
 import { useRouter } from 'next/router'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500'] })
 
 export default function Login() {
-  const { state } = useContext(UserContext)
+  const { state } = useAuth()
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
   const router = useRouter()
@@ -31,7 +31,6 @@ export default function Login() {
 
     if (user === 'admin' && password === 'admin') {
       alert(`Bem-vindo de volta Administrador !`)
-      router.push('/dashboard')
     } else if (user === '') {
       alert('Por favor preencha ambos os campos')
       return
@@ -40,7 +39,6 @@ export default function Login() {
       return
     } else if (password === defaultPassword) {
       alert(`Bem-vindo de volta ${user} !`)
-      router.push('/dashboard')
     } else {
       alert("usuário ou senha incorretos")
     }
@@ -52,11 +50,14 @@ export default function Login() {
     validateFields()
 
     if (user === 'admin' && password === 'admin') {
+      state.logged = true
       state.admin = true
+      router.push('/dashboard')
     }
 
     if (password === 'user') {
       state.logged = true
+      router.push('/dashboard')
     }
 
     console.log(`User connected: ${state.logged}

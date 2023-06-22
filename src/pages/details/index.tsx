@@ -1,14 +1,15 @@
-
 import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import Link from 'next/link'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import arrouLeftIcon from '../../assets/svg/CaretLeft.svg'
+import arrowLeftIcon from '../../assets/svg/CaretLeft.svg'
 import Image from 'next/image'
 import saladImage from '../../assets/images/salad.png'
 import { IngredientsList } from '@/components/IngredientsList'
 import { useState } from 'react'
+import { useAuth } from '@/hooks/UserContext'
+import { NotConnectedView } from '@/components/NotConnectedView'
 
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -17,6 +18,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500', '400
 
 export default function Details() {
   const [total, setTotal] = useState(1)
+  const { state } = useAuth()
 
   function sub(e: any) {
     e.preventDefault()
@@ -29,6 +31,12 @@ export default function Details() {
     e.preventDefault()
     setTotal(total + 1)
   }
+
+  if (!state.logged) {
+    return (
+      <NotConnectedView></NotConnectedView>
+    )
+  }
   return (
     <div className='flex flex-col bg-bgPrimary w-screen overflow-hidden h-screen '>
       <header className='top-0  text-white'>
@@ -39,7 +47,7 @@ export default function Details() {
         <section className=' bg-bgPrimary items-start text-white grid '>
           <div className=' flex flex-col gap-8 '>
             <Link className='flex   ml-[10vw] w-28 hover:opacity-70 h-[34px] justify-start items-center' href={'/dashboard'}>
-              <Image alt='Left Arrow Icon' src={arrouLeftIcon} />
+              <Image alt='Left Arrow Icon' src={arrowLeftIcon} />
               <span className={`${poppins.className} font-medium text-2xl`}>
                 voltar
               </span>

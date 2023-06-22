@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Dispatch, createContext, useReducer } from "react"
+import React, { Dispatch, createContext, useReducer, useContext } from "react"
 
 type StateType = {
   logged: boolean
@@ -30,12 +30,12 @@ const reducer = (state: StateType, action: ActionType) => {
   }
 }
 
-export const UserContext = createContext<{
+const UserContext = createContext<{
   state: StateType
   dispatch: Dispatch<ActionType>
 }>({ state: initialState, dispatch: () => null })
 
-export const UserContextProvider = ({
+const UserContextProvider = ({
   children,
 }: {
   children: React.ReactNode
@@ -48,3 +48,9 @@ export const UserContextProvider = ({
     </UserContext.Provider>
   )
 }
+const useAuth = () => {
+  const context = useContext(UserContext)
+  return context
+}
+
+export { UserContext, UserContextProvider, useAuth }
