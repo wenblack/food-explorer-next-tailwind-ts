@@ -22,7 +22,7 @@ const reducer = (state: StateType, action: ActionType) => {
     case "login":
       return { ...state, logged: true }
     case 'logOut':
-      return { ...state, logged: false }
+      return { ...state, logged: false}
     case 'admin':
       return { ...state, admin: true }
     default:
@@ -52,5 +52,7 @@ const useAuth = () => {
   const context = useContext(UserContext)
   return context
 }
+
+
 
 export { UserContext, UserContextProvider, useAuth }

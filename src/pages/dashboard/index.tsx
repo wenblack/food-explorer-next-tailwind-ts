@@ -4,22 +4,40 @@ import { Roboto_Flex } from 'next/font/google'
 import { CategorieList } from '@/components/CategorieList'
 import { HeroSection } from '@/components/HeroSection'
 import { NotConnectedView } from '@/components/NotConnectedView'
-import { useAuth } from '@/hooks/UserContext'
+import { useEffect, useState } from 'react'
+import { LoadingView } from '@/components/LoadingView'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 
 export default function Home() {
+  const [islogged,setisLogged] = useState(false)
+  const [disconnected, setDisconnected] = useState(false)
 
-  const { state } = useAuth()
 
-  if (state.logged === false) {
+  useEffect(()=>{
+    let result = localStorage.getItem('logged')
+     
+    if(result === 'true'){
+      setisLogged(true)
+      console.log('LocalStorage é '+result)
+    }else if (result === null){
+      setDisconnected(true)
+      console.log('LocalStorage é '+result)
+    } else{
+      console.log('LocalStorage é '+result)
+    }
+
+  })
+
+  if (disconnected) {
     return (
-      <NotConnectedView></NotConnectedView>
-    )
-  }
-
-  return (
-    <div className={` flex overflow-hidden  min-h-[100vh] w-full   flex-col  max-w-screen bg-bgPrimary ${roboto.className}`}>
+      <NotConnectedView/>
+      )
+    }
+  
+  if(!islogged){
+    return(
+      <div className={` flex overflow-hidden  min-h-[100vh] w-full   flex-col  max-w-screen bg-bgPrimary ${roboto.className}`}>
       <header className=' flex top-0   text-white '>
         <Header></Header>
       </header>
@@ -34,5 +52,11 @@ export default function Home() {
         <Footer></Footer>
       </footer>
     </div>
+    )
+  }
+
+
+  return (
+    <LoadingView/>
   )
 }
