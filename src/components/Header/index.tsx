@@ -19,7 +19,7 @@ function classNames(...classes: string[]) {
 
 export function Header() {
 
-  
+
 
   return (
     <Disclosure
@@ -67,10 +67,10 @@ export function Header() {
                       <input className="bg-transparent w-full outline-none font-normal text-base " placeholder="Busque pelas opções"></input>
                     </form>
                     <Link href='/orders' className="flex sm:hidden md:flex">
-                      <Button  value="Meu pedido " order number={0} />
+                      <Button value="Meu pedido " order number={0} />
                     </Link>
                     <Link href='/orders' className="flex w-[120px] md:hidden lg:hidden">
-                      <Button  value="" order number={0} />
+                      <Button value="" order number={0} />
                     </Link>
                   </div>
 
@@ -89,7 +89,7 @@ export function Header() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
+                  as={Link}
                   href={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
