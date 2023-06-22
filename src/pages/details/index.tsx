@@ -1,3 +1,4 @@
+
 import { Roboto_Flex } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import Link from 'next/link'
@@ -10,6 +11,7 @@ import { IngredientsList } from '@/components/IngredientsList'
 import { useState } from 'react'
 import { useAuth } from '@/hooks/UserContext'
 import { NotConnectedView } from '@/components/NotConnectedView'
+import { useRouter } from 'next/router'
 
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
@@ -19,7 +21,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['700', '600', '500', '400
 export default function Details() {
   const [total, setTotal] = useState(1)
   const { state } = useAuth()
-
+  const router = useRouter()
   function sub(e: any) {
     e.preventDefault()
     if (total === 1) {
@@ -31,8 +33,12 @@ export default function Details() {
     e.preventDefault()
     setTotal(total + 1)
   }
+  function navigateTOCart(e: any) {
+    e.preventDefault()
+    router.push('/cart')
+  }
 
-  if (!state.logged) {
+  if (state.logged === false) {
     return (
       <NotConnectedView></NotConnectedView>
     )
@@ -75,7 +81,7 @@ export default function Details() {
                   }
                   <button className='hover:opacity-70' onClick={add}>+</button>
                 </span>
-                <button className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button>
+                <button onClick={navigateTOCart} className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' >incluir</button>
               </form>
             </span>
 
@@ -88,7 +94,7 @@ export default function Details() {
                     total === 1 ? '01' : total
                   }
                   <button className='hover:opacity-70' onClick={add}>+</button>
-                  <button className='hover:opacity-70 bg-redButton block px-4 ml-6 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button>
+                  <button onClick={navigateTOCart} className='hover:opacity-70 bg-redButton block px-4 ml-6 text-title h-[56px] w-[100px] rounded-lg text-lg' >incluir</button>
                 </span>
               </form>
             </span>

@@ -1,11 +1,21 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Heading } from '@/components/Heading'
+import { NotConnectedView } from '@/components/NotConnectedView'
+import { useAuth } from '@/hooks/UserContext'
 import { Roboto_Flex } from 'next/font/google'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 
 export default function Orders() {
+  const { state } = useAuth()
+
+  if (state.logged === false) {
+    return (
+      <NotConnectedView></NotConnectedView>
+    )
+  }
+
   return (
     <div className={`flex h-screen overflow-hidden flex-col w-full   max-w-screen bg-bgPrimary ${roboto.className}`}>
       <header className='text-white'>

@@ -3,10 +3,19 @@ import { PaymentView } from '@/components/PaymentView'
 import { ProductsList } from '@/components/ProductsList'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { NotConnectedView } from '@/components/NotConnectedView'
+import { useAuth } from '@/hooks/UserContext'
 
 const roboto = Roboto_Flex({ subsets: ['latin'] })
 
 export default function Cart() {
+  const { state } = useAuth()
+  if (state.logged === false) {
+    return (
+      <NotConnectedView></NotConnectedView>
+    )
+  }
+
   return (
     <div className='overflow-hidden'>
       <header className='  text-white'>

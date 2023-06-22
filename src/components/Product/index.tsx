@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google'
 import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 
 
@@ -20,6 +21,7 @@ interface ProductProps {
 
 export default function Product({ description, imgUrl, name, price }: ProductProps) {
   const [total, setTotal] = useState(1)
+  const router = useRouter()
 
   function sub(e: any) {
     e.preventDefault()
@@ -33,6 +35,10 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
     setTotal(total + 1)
   }
 
+  function navigateTOCart(e: any) {
+    e.preventDefault()
+    router.push('/cart')
+  }
   return (
     <div className={` flex  flex-col bg-bgSecondary rounded-lg w-[300px] h-[512px] justify-center items-center  gap-4   ${roboto.className}`}>
       {/* Logo Column(Desktop)*/}
@@ -57,7 +63,7 @@ export default function Product({ description, imgUrl, name, price }: ProductPro
               }
               <button className='hover:opacity-70' onClick={add}>+</button>
             </span>
-            <button className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' type='submit'>incluir</button>
+            <button onClick={navigateTOCart} className='hover:opacity-70 bg-redButton block px-4 text-title h-[56px] w-[100px] rounded-lg text-lg' type='button'>incluir</button>
           </span>
         </div>
       </section >
